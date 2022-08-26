@@ -61,7 +61,7 @@ spec:
               containerPort: 9095
             - name: http-memberlist
               containerPort: 7946
-            - name: http
+            - name: http-metrics
               containerPort: 3100
           {{- with .Values.ingester.extraEnv }}
           env:
