@@ -196,6 +196,24 @@ entries:
   loki-distributed:
   - apiVersion: v2
     appVersion: 2.8.3
+    created: "2023-07-31T18:38:40.47332917Z"
+    description: Helm chart for Grafana Loki in microservices mode
+    digest: 29f36012be7c776ec7793acd6662f14d70dbff5c0fdbf380a02a0df425764c78
+    home: https://grafana.github.io/helm-charts
+    icon: https://grafana.com/docs/loki/latest/logo_and_name.png
+    maintainers:
+    - name: unguiculus
+    name: loki-distributed
+    sources:
+    - https://github.com/grafana/loki
+    - https://grafana.com/oss/loki/
+    - https://grafana.com/docs/loki/latest/
+    type: application
+    urls:
+    - https://github.com/zalegrala/helm-charts/releases/download/loki-distributed-0.71.1/loki-distributed-0.71.1.tgz
+    version: 0.71.1
+  - apiVersion: v2
+    appVersion: 2.8.3
     created: "2023-07-28T22:04:31.49993473Z"
     description: Helm chart for Grafana Loki in microservices mode
     digest: 49972d0134cc459f68129458d1caae0f466d2f0be6d810ba019247ec3a7ccd07
@@ -390,6 +408,42 @@ entries:
   tempo-distributed:
   - apiVersion: v2
     appVersion: 2.1.1
+    created: "2023-07-31T18:38:40.655537254Z"
+    dependencies:
+    - alias: minio
+      condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 4.0.12
+    - alias: grafana-agent-operator
+      condition: metaMonitoring.grafanaAgent.installOperator
+      name: grafana-agent-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 0.2.2
+    description: Grafana Tempo in MicroService mode
+    digest: 6504a02292771e2b5d66710e5aed15920bfb492c52ed9b969d680bea047d30f5
+    home: https://grafana.com/docs/tempo/latest/
+    icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
+    maintainers:
+    - email: number101010@gmail.com
+      name: joe-elliott
+    - email: 9215868@gmail.com
+      name: swartz-k
+    - name: annanay25
+    - name: mdisibio
+    - name: mapno
+    - name: BitProcessor
+    - name: faustodavid
+    - name: zalegrala
+    name: tempo-distributed
+    sources:
+    - https://github.com/grafana/tempo
+    type: application
+    urls:
+    - https://github.com/zalegrala/helm-charts/releases/download/tempo-distributed-1.4.15/tempo-distributed-1.4.15.tgz
+    version: 1.4.15
+  - apiVersion: v2
+    appVersion: 2.1.1
     created: "2023-07-28T22:04:31.972184065Z"
     dependencies:
     - alias: minio
@@ -531,4 +585,4 @@ entries:
     urls:
     - https://github.com/zalegrala/helm-charts/releases/download/tempo-vulture-0.2.4/tempo-vulture-0.2.4.tgz
     version: 0.2.4
-generated: "2023-07-28T22:04:32.116929769Z"
+generated: "2023-07-31T18:38:40.655577253Z"
